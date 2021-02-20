@@ -8,7 +8,7 @@ use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use League\OAuth2\Client\Token\AccessToken;
 use Mockery as m;
 
-class VkontakteTest extends \PHPUnit_Framework_TestCase
+class VkontakteTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @type Provider
@@ -16,7 +16,7 @@ class VkontakteTest extends \PHPUnit_Framework_TestCase
     protected $provider;
     protected $defaultScopes = ['email', 'friends', 'offline'];
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->provider = new Provider([
             'clientId' => 'mock_client_id',
@@ -24,7 +24,7 @@ class VkontakteTest extends \PHPUnit_Framework_TestCase
             'redirectUri' => 'none',
         ]);
     }
-    protected function tearDown()
+    protected function tearDown(): void
     {
         m::close();
         parent::tearDown();
@@ -258,7 +258,7 @@ class VkontakteTest extends \PHPUnit_Framework_TestCase
         $checkResponse->setAccessible(true);
 
         $response->shouldReceive('getBody')->andReturn($this->getMockErrorFlat());
-        $this->setExpectedException(IdentityProviderException::class, 'mock_error_description');
+        $this->expectException(IdentityProviderException::class, 'mock_error_description');
         $checkResponse->invokeArgs($provider, [$response, json_decode($this->getMockErrorFlat(), true)]);
     }
     public function testCheckResponseErrorTree()
@@ -274,7 +274,7 @@ class VkontakteTest extends \PHPUnit_Framework_TestCase
         $checkResponse->setAccessible(true);
 
         $response->shouldReceive('getBody')->andReturn($this->getMockErrorTree());
-        $this->setExpectedException(IdentityProviderException::class, 'mock_error_message', 123);
+        $this->expectException(IdentityProviderException::class, 'mock_error_message', 123);
         $checkResponse->invokeArgs($provider, [$response, json_decode($this->getMockErrorTree(), true)]);
     }
 }
