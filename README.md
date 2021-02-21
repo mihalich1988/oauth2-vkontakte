@@ -1,8 +1,8 @@
 # Vkontakte OAuth2 client provider
 
-[![Build Status](https://travis-ci.org/j4k/oauth2-vkontakte.svg?branch=master)](https://travis-ci.org/zablik/oauth2-vkontakte)
-[![Latest Stable Version](https://img.shields.io/packagist/v/j4k/oauth2-vkontakte.svg)](https://packagist.org/packages/zablik/oauth2-vkontakte)
-[![License](https://img.shields.io/packagist/l/j4k/oauth2-vkontakte.svg)](https://packagist.org/packages/zablik/oauth2-vkontakte)
+[![Build Status](https://travis-ci.com/zablik/oauth2-vkontakte.svg?branch=master)](https://travis-ci.com/zablik/oauth2-vkontakte)
+[![Latest Stable Version](https://img.shields.io/packagist/v/zablik/oauth2-vkontakte.svg)](https://packagist.org/packages/zablik/oauth2-vkontakte)
+[![License](https://img.shields.io/packagist/l/zablik/oauth2-vkontakte.svg)](https://packagist.org/packages/zablik/oauth2-vkontakte)
 
 This package provides [Vkontakte](https://vk.com) integration for [OAuth2 Client](https://github.com/thephpleague/oauth2-client) by the League.
 
@@ -11,6 +11,12 @@ This package provides [Vkontakte](https://vk.com) integration for [OAuth2 Client
 ```sh
 composer require zablik/oauth2-vkontakte
 ```
+## Versions
+
+Use `v2.0+` for `"php": "^7.3 || ^8.0"`
+
+Use `v1.2.3` for `"php": "^5.6 || ^7.0"`
+
 
 ## Configuration
 
