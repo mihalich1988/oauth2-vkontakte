@@ -1,5 +1,5 @@
 {
-    "name": "zablik/oauth2-vkontakte",
+    "name": "mihalich1988/oauth2-vkontakte",
     "description": "Vkontakte provider for league/oauth2-client",
     "keywords": [
         "league",
@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^7.2 || ^8.0",
         "league/oauth2-client": "^2.0"
     },
     "require-dev": {
